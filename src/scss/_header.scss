@@ -1,0 +1,34 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Creepster', cursive;
+    background-color: #171731;
+    width: 100%;
+    padding: 6px;
+    height: fit-content;
+    min-height: 44px;
+
+    .header__title {
+        text-align: center;
+        font-size: $font-xlg;
+        font-weight: 100;
+        color: #00afc8;
+        text-shadow:
+         black 0px 0px 1px,
+         black 0px 0px 1px,
+         black 0px 0px 1px,
+         black 0px 0px 1px,
+         #a5fb05 0px 0px 5px,
+         #02602e 0px 0 10px;
+    }
+    
+    .header__subtitle {
+        letter-spacing: 1px;
+        text-align: center;
+        font-family: 'Bowlby One SC', cursive;
+        color: #ffffff;
+        font-size: $font-lg;
+    }
+}
