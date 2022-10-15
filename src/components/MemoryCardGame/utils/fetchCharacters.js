@@ -24,7 +24,9 @@ const fetchCharacters = async (setState, charactersLength) => {
     const data = await response.json();
 
     data.forEach(
-      (character) => characters.push({ url: character.image, name: character.name }),
+      (character) => characters.push(
+        { url: character.image, name: character.name, clicked: false },
+      ),
     );
 
     setState(characters);
