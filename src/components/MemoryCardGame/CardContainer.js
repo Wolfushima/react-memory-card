@@ -2,7 +2,7 @@ import React from 'react';
 import uniqid from 'uniqid';
 import Card from './Card';
 
-const CardContainer = ({ data }) => (
+const CardContainer = ({ data, handleClickOnCharacter, handleKeyDownOnCharacter }) => (
   <div className="card-container">
     {
     data.map((item, i) => (
@@ -11,6 +11,8 @@ const CardContainer = ({ data }) => (
         alt={item.name}
         count={`card${i + 1}`}
         key={uniqid()}
+        handleClickOnCharacter={handleClickOnCharacter}
+        handleKeyDownOnCharacter={handleKeyDownOnCharacter}
       />
     ))
   }
