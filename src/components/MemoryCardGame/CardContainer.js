@@ -6,7 +6,7 @@ const CardContainer = ({ data, handleClickOnCharacter, handleKeyDownOnCharacter 
   <div className="card-container">
     {
       data.map((item, i) => {
-        if (i === 5 || i === 10 || i === 15) {
+        if (i === 5 || i === 10 || i === 15 || i === 20 || i === 25 || i === 30 || i === 35) {
           return (
             <Fragment key={uniqid()}>
               <span className="break-line" />
