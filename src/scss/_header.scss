@@ -14,21 +14,21 @@ header {
         text-align: center;
         font-size: $font-xlg;
         font-weight: 100;
-        color: #00afc8;
+        color: $color-primary-700;
         text-shadow:
          black 0px 0px 1px,
          black 0px 0px 1px,
          black 0px 0px 1px,
          black 0px 0px 1px,
          #a5fb05 0px 0px 5px,
-         #02602e 0px 0 10px;
+         $color-secondary-700 0px 0 10px;
     }
     
     .header__subtitle {
         letter-spacing: 1px;
         text-align: center;
         font-family: 'Bowlby One SC', cursive;
-        color: #ffffff;
+        color: #fff54c;
         font-size: $font-lg;
     }
 }
