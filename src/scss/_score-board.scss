@@ -1,0 +1,28 @@
+.score-board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Creepster', cursive;
+  font-family: 'Bowlby One SC', cursive;
+  color: white;
+  width: 100%;
+  background: #132c13;
+  align-self: center;
+  font-size: $font-xsm;
+  border-top: 1px solid #003d04;
+  border-bottom: 1px solid #003d04;
+  box-shadow: 1px 1px 4px black;
+  padding-top: 3px;
+  padding-bottom: 3px;
+
+  .score-container,
+  .high-score-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    min-width: 100px;
+    width: 130px;
+  }
+}
