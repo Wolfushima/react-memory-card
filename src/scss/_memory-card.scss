@@ -80,4 +80,16 @@
         object-fit: cover;
         border-radius: 2px;
     }
+
+    .character-visible {
+      opacity: 1;
+    }
+
+    .character-hidden {
+      opacity: 0;
+    }
+
+    .smooth-image {
+      transition: opacity 0.5s;
+    }
 }
