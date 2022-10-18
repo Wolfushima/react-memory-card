@@ -16,5 +16,7 @@ body {
     color: $color-neutral-700;
     background-color: $color-neutral-100;
     background-color: #00afc8;
-    min-width: min-content;
+    background: #3c6121;
+    background: linear-gradient(rgb(1, 36, 14), green) no-repeat center center fixed;
+    min-width: 320px;
 }
