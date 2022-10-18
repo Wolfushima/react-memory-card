@@ -19,7 +19,7 @@ const MemoryCardGame = () => {
     handleCharacterClick(e, data, score, setScore, setData, setIsGameOver);
   };
 
-  /* Iinitialize game */
+  /* Initialize game */
   useEffect(() => {
     fetchCharacters(setData, 2);
   }, []);
@@ -51,6 +51,15 @@ const MemoryCardGame = () => {
     if (score === 20) { setLevel('EXTRAHARD'); }
     if (score > highScore) { setHighScore(score); }
   }, [score]);
+
+  if (data.length === 0) {
+    return (
+      <ScoreBoard
+        score={score}
+        highScore={highScore}
+      />
+    );
+  }
 
   return (
     <>
