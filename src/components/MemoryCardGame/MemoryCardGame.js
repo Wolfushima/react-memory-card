@@ -3,6 +3,7 @@ import OverviewMemoryCard from './OverviewMemoryCard';
 import fetchCharacters from './utils/fetchCharacters';
 import { handleCharacterClick, handleCharacterKeyDown } from './utils/handleClickAndKeyDownEvents';
 import ScoreBoard from './ScoreBoard';
+import GameOver from './GameOver';
 
 const MemoryCardGame = () => {
   const [data, setData] = useState([]);
@@ -35,10 +36,11 @@ const MemoryCardGame = () => {
   /* Game over */
   useEffect(() => {
     if (isGameOver) {
-      console.log('GAME OVER!');
       fetchCharacters(setData, 2);
       setScore(0);
-      setIsGameOver(false);
+      setTimeout(() => {
+        setIsGameOver(false);
+      }, 1000);
     }
   }, [isGameOver]);
 
@@ -58,6 +60,18 @@ const MemoryCardGame = () => {
         score={score}
         highScore={highScore}
       />
+    );
+  }
+
+  if (isGameOver) {
+    return (
+      <>
+        <ScoreBoard
+          score={score}
+          highScore={highScore}
+        />
+        <GameOver />
+      </>
     );
   }
 
