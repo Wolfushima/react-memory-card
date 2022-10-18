@@ -15,6 +15,8 @@ const CardContainer = ({ data, handleClickOnCharacter, handleKeyDownOnCharacter 
                 alt={item.name}
                 count={`card${i + 1}`}
                 key={uniqid()}
+                handleClickOnCharacter={handleClickOnCharacter}
+                handleKeyDownOnCharacter={handleKeyDownOnCharacter}
               />
             </Fragment>
           );
