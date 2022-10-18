@@ -1,0 +1,20 @@
+.game-over-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+
+  .game-over-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bowlby One SC', cursive;
+    font-size: $font-xsm;
+    padding: 5px;
+    padding-left: 12px;
+    letter-spacing: 7px;
+    color: red;
+    text-shadow: 0 0 4px black;
+  }
+}
