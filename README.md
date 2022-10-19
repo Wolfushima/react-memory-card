@@ -26,7 +26,7 @@ The main goal of this project is to use `React hooks` or `lifecycle methods`.
 
 The idea of the game is to remember the last card/cards you clicked on, each time you click on a card the current cards will shuffle(get sorted randomly) and now you have to click on a different card until you have clicked them all.
 
-The game starts with 2 cards and as your score gets higher the difficulty does too until a maximum of 20 cards, then the cards will be replaced randomly for 20 new ones until you lose.
+The game starts with 2 cards and as your score gets higher the difficulty does too until a maximum of 40 cards, then the cards will be replaced randomly for 40 new ones until you reach a score of 155.
 
 Each time the game starts or the difficulty increases a new set of random cards gets `fetched` from the `rickandmortyapi`.
 
