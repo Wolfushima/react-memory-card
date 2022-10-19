@@ -10,7 +10,6 @@ const MemoryCardGame = () => {
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
   const [isGameOver, setIsGameOver] = useState(false);
-  const [isNextLevel, setIsNextLevel] = useState(false);
   const [hasDataUpdated, setHasDataUpdated] = useState(false);
 
   const handleKeyDownOnCharacter = (e) => {
@@ -19,13 +18,6 @@ const MemoryCardGame = () => {
 
   const handleClickOnCharacter = (e) => {
     handleCharacterClick(e, data, score, setScore, setData, setIsGameOver);
-  };
-
-  const toggleNextLevel = () => {
-    setIsNextLevel(true);
-    setTimeout(() => {
-      setIsNextLevel(false);
-    }, 300);
   };
 
   /* Initialize game */
@@ -46,31 +38,12 @@ const MemoryCardGame = () => {
 
   /* Score */
   useEffect(() => {
-    if (score === 2) {
-      fetchCharacters(setData, 3);
-      toggleNextLevel();
-    }
-    if (score === 5) {
-      fetchCharacters(setData, 5);
-      toggleNextLevel();
-    }
-    if (score === 10) {
-      fetchCharacters(setData, 10);
-      toggleNextLevel();
-    }
-    if (score === 15) {
-      fetchCharacters(setData, 15);
-      toggleNextLevel();
-    }
-    if (score === 20) {
-      fetchCharacters(setData, 20);
-      toggleNextLevel();
-    }
-    if (score === 40 || score === 80 || score === 160) {
-      fetchCharacters(setData, 40);
-      toggleNextLevel();
-    }
-
+    if (score === 2) { fetchCharacters(setData, 3); }
+    if (score === 5) { fetchCharacters(setData, 5); }
+    if (score === 10) { fetchCharacters(setData, 10); }
+    if (score === 15) { fetchCharacters(setData, 15); }
+    if (score === 20) { fetchCharacters(setData, 20); }
+    if (score === 40 || score === 80 || score === 160) { fetchCharacters(setData, 40); }
     if (score > highScore) { setHighScore(score); }
   }, [score]);
 
@@ -80,7 +53,7 @@ const MemoryCardGame = () => {
     setTimeout(() => { setHasDataUpdated(true); }, 300);
   }, [data]);
 
-  if (data.length === 0 || isNextLevel) {
+  if (data.length === 0) {
     return (
       <ScoreBoard
         score={score}
