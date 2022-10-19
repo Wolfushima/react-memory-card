@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/react-memory-card/static/css/main.71cd693c.css",
-    "main.js": "/react-memory-card/static/js/main.ef714ab5.js",
+    "main.css": "/react-memory-card/static/css/main.3ab23d64.css",
+    "main.js": "/react-memory-card/static/js/main.4f429cfa.js",
     "index.html": "/react-memory-card/index.html"
   },
   "entrypoints": [
-    "static/css/main.71cd693c.css",
-    "static/js/main.ef714ab5.js"
+    "static/css/main.3ab23d64.css",
+    "static/js/main.4f429cfa.js"
   ]
 }
