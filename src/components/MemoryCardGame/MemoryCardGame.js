@@ -11,6 +11,7 @@ const MemoryCardGame = () => {
   const [highScore, setHighScore] = useState(0);
   const [isGameOver, setIsGameOver] = useState(false);
   const [isNextLevel, setIsNextLevel] = useState(false);
+  const [hasDataUpdated, setHasDataUpdated] = useState(false);
 
   const handleKeyDownOnCharacter = (e) => {
     handleCharacterKeyDown(e, data, score, setScore, setData, setIsGameOver);
@@ -73,6 +74,12 @@ const MemoryCardGame = () => {
     if (score > highScore) { setHighScore(score); }
   }, [score]);
 
+  /* Data */
+  useEffect(() => {
+    setHasDataUpdated(false);
+    setTimeout(() => { setHasDataUpdated(true); }, 300);
+  }, [data]);
+
   if (data.length === 0 || isNextLevel) {
     return (
       <ScoreBoard
@@ -101,6 +108,7 @@ const MemoryCardGame = () => {
         highScore={highScore}
       />
       <OverviewMemoryCard
+        hasDataUpdated={hasDataUpdated}
         data={data}
         handleClickOnCharacter={handleClickOnCharacter}
         handleKeyDownOnCharacter={handleKeyDownOnCharacter}

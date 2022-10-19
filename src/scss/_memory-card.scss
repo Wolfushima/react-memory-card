@@ -88,8 +88,12 @@
     .character-hidden {
       opacity: 0;
     }
+}
 
-    .smooth-image {
-      transition: opacity 0.5s;
-    }
+.memory-card-visible {
+  opacity: 1;
+}
+
+.memory-card-hidden {
+  opacity: 0;
 }
