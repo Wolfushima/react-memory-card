@@ -41,9 +41,10 @@ const MemoryCardGame = () => {
     if (score === 2) { fetchCharacters(setData, 3); }
     if (score === 5) { fetchCharacters(setData, 5); }
     if (score === 10) { fetchCharacters(setData, 10); }
-    if (score === 15) { fetchCharacters(setData, 15); }
-    if (score === 20) { fetchCharacters(setData, 20); }
-    if (score === 40 || score === 80 || score === 160) { fetchCharacters(setData, 40); }
+    if (score === 20) { fetchCharacters(setData, 15); }
+    if (score === 35) { fetchCharacters(setData, 20); }
+    if (score === 55 || score === 95 || score === 115) { fetchCharacters(setData, 40); }
+    if (score === 155) { setIsGameOver(true); }
     if (score > highScore) { setHighScore(score); }
   }, [score]);
 
