@@ -1,5 +1,5 @@
 const handleCharacterClick = (e, data, score, setScore, setData, setIsGameOver) => {
-  const characterName = e.target.alt;
+  const characterName = e.target.alt ? e.target.alt : e.target.querySelector('img').alt;
   const character = data.find((obj) => obj.name === characterName);
 
   if (character.clicked === true) {
