@@ -20,6 +20,7 @@ const Card = ({
         onLoad={() => setImageLoaded(true)}
         src={src}
         alt={alt}
+        draggable="false"
       />
     </div>
   );
